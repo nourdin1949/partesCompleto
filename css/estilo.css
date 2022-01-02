@@ -1,0 +1,23 @@
+.logoJE {
+  width: 195px;
+  height: 55px;
+}
+
+.logoUE{
+  width: 80px;
+  height: 65px;
+}
+
+#pag {
+size: 48px;
+  margin-top: 5%;
+  color:rgb(132, 196, 132);
+}
+
+/*Crearhmtl cab*/
+#cab {
+  font-size: 4px;
+}
+.tableIndex{
+  width: 75%;
+}
