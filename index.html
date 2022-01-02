@@ -13,142 +13,143 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/codigo.js" ></script>
   <script>
     $(funcioniniciareventos);
 
-    function funcioniniciareventos() {
-      $("#listar").click(eventoListar);
-      $("#insertar").click(eventoInsertar);
-      $("#listar1").click(eventoListar1);
-      $("#insertar1").click(eventoInsertar1);
-      $("#Todolistar").click(eventoListarTodo);
+function funcioniniciareventos() {
+  $("#listar").click(eventoListar);
+  $("#insertar").click(eventoInsertar);
+  $("#listar1").click(eventoListar1);
+  $("#insertar1").click(eventoInsertar1);
+  $("#Todolistar").click(eventoListarTodo);
 
+}
+
+function eventoListar() {
+  $(".body").html(
+    ' <center><h1>Esta siendo redirigido </h1><span></span><h1><div class="preloader-wrapper small active">' +
+    '<div class="spinner-layer spinner-green-only">' +
+    '<div class="circle-clipper left">' +
+    ' <div class="circle"></div>' +
+    '</div><div class="gap-patch">' +
+    '<div class="circle"></div>' +
+    '</div><div class="circle-clipper right">' +
+    ' <div class="circle"></div>' +
+    '</div>' +
+    '</div>' +
+    '</div></h1></center>')
+  var url = "./parte/listarDatos.php";
+  count = 3
+  setInterval(function () {
+    document.getElementsByTagName("span")[0].textContent = "Tiempo de espera " + (count - 1) + " segundos"
+    count--;
+
+    if (count == 0) {
+      $(location).attr('href', url);
     }
+  }, 1000);
+}
 
-    function eventoListar() {
-      $(".body").html(
-        ' <center><h1>Esta siendo redirigido </h1><span></span><h1><div class="preloader-wrapper small active">' +
-        '<div class="spinner-layer spinner-green-only">' +
-        '<div class="circle-clipper left">' +
-        ' <div class="circle"></div>' +
-        '</div><div class="gap-patch">' +
-        '<div class="circle"></div>' +
-        '</div><div class="circle-clipper right">' +
-        ' <div class="circle"></div>' +
-        '</div>' +
-        '</div>' +
-        '</div></h1></center>')
-      var url = "./parte/listarDatos.php";
-      count = 3
-      setInterval(function () {
-        document.getElementsByTagName("span")[0].textContent = "Tiempo de espera " + (count - 1) + " segundos"
-        count--;
+function eventoInsertar() {
+  $(".body").html(
+    ' <center><h1>Esta siendo redirigido </h1><span></span><h1><div class="preloader-wrapper small active">' +
+    '<div class="spinner-layer spinner-green-only">' +
+    '<div class="circle-clipper left">' +
+    ' <div class="circle"></div>' +
+    '</div><div class="gap-patch">' +
+    '<div class="circle"></div>' +
+    '</div><div class="circle-clipper right">' +
+    ' <div class="circle"></div>' +
+    '</div>' +
+    '</div>' +
+    '</div></h1></center>')
+  var url = "./parte/formulario.html";
+  count = 3
+  setInterval(function () {
+    document.getElementsByTagName("span")[0].textContent = "Tiempo de espera " + (count - 1) + " segundos"
+    count--;
 
-        if (count == 0) {
-          $(location).attr('href', url);
-        }
-      }, 1000);
+    if (count == 0) {
+      $(location).attr('href', url);
     }
+  }, 1000);
+}
 
-    function eventoInsertar() {
-      $(".body").html(
-        ' <center><h1>Esta siendo redirigido </h1><span></span><h1><div class="preloader-wrapper small active">' +
-        '<div class="spinner-layer spinner-green-only">' +
-        '<div class="circle-clipper left">' +
-        ' <div class="circle"></div>' +
-        '</div><div class="gap-patch">' +
-        '<div class="circle"></div>' +
-        '</div><div class="circle-clipper right">' +
-        ' <div class="circle"></div>' +
-        '</div>' +
-        '</div>' +
-        '</div></h1></center>')
-      var url = "./parte/formulario.html";
-      count = 3
-      setInterval(function () {
-        document.getElementsByTagName("span")[0].textContent = "Tiempo de espera " + (count - 1) + " segundos"
-        count--;
+function eventoListar1() {
+  $(".body").html(
+    ' <center><h1>Esta siendo redirigido </h1><span></span><h1><div class="preloader-wrapper small active">' +
+    '<div class="spinner-layer spinner-green-only">' +
+    '<div class="circle-clipper left">' +
+    ' <div class="circle"></div>' +
+    '</div><div class="gap-patch">' +
+    '<div class="circle"></div>' +
+    '</div><div class="circle-clipper right">' +
+    ' <div class="circle"></div>' +
+    '</div>' +
+    '</div>' +
+    '</div></h1></center>')
+  var url = "./buenaConducta/listarDatos.php";
+  count = 3
+  setInterval(function () {
+    document.getElementsByTagName("span")[0].textContent = "Tiempo de espera " + (count - 1) + " segundos"
+    count--;
 
-        if (count == 0) {
-          $(location).attr('href', url);
-        }
-      }, 1000);
+    if (count == 0) {
+      $(location).attr('href', url);
     }
+  }, 1000);
+}
 
-    function eventoListar1() {
-      $(".body").html(
-        ' <center><h1>Esta siendo redirigido </h1><span></span><h1><div class="preloader-wrapper small active">' +
-        '<div class="spinner-layer spinner-green-only">' +
-        '<div class="circle-clipper left">' +
-        ' <div class="circle"></div>' +
-        '</div><div class="gap-patch">' +
-        '<div class="circle"></div>' +
-        '</div><div class="circle-clipper right">' +
-        ' <div class="circle"></div>' +
-        '</div>' +
-        '</div>' +
-        '</div></h1></center>')
-      var url = "./buenaConducta/listarDatos.php";
-      count = 3
-      setInterval(function () {
-        document.getElementsByTagName("span")[0].textContent = "Tiempo de espera " + (count - 1) + " segundos"
-        count--;
+function eventoInsertar1() {
+  $(".body").html(
+    ' <center><h1>Esta siendo redirigido </h1><span></span><h1><div class="preloader-wrapper small active">' +
+    '<div class="spinner-layer spinner-green-only">' +
+    '<div class="circle-clipper left">' +
+    ' <div class="circle"></div>' +
+    '</div><div class="gap-patch">' +
+    '<div class="circle"></div>' +
+    '</div><div class="circle-clipper right">' +
+    ' <div class="circle"></div>' +
+    '</div>' +
+    '</div>' +
+    '</div></h1></center>')
+  var url = "./buenaConducta/formularioBuenaConducta.html";
+  count = 3
+  setInterval(function () {
+    document.getElementsByTagName("span")[0].textContent = "Tiempo de espera " + (count - 1) + " segundos"
+    count--;
 
-        if (count == 0) {
-          $(location).attr('href', url);
-        }
-      }, 1000);
+    if (count == 0) {
+      $(location).attr('href', url);
     }
+  }, 1000);
+}
 
-    function eventoInsertar1() {
-      $(".body").html(
-        ' <center><h1>Esta siendo redirigido </h1><span></span><h1><div class="preloader-wrapper small active">' +
-        '<div class="spinner-layer spinner-green-only">' +
-        '<div class="circle-clipper left">' +
-        ' <div class="circle"></div>' +
-        '</div><div class="gap-patch">' +
-        '<div class="circle"></div>' +
-        '</div><div class="circle-clipper right">' +
-        ' <div class="circle"></div>' +
-        '</div>' +
-        '</div>' +
-        '</div></h1></center>')
-      var url = "./buenaConducta/formularioBuenaConducta.html";
-      count = 3
-      setInterval(function () {
-        document.getElementsByTagName("span")[0].textContent = "Tiempo de espera " + (count - 1) + " segundos"
-        count--;
+function eventoListarTodo() {
+  $(".body").html(
+    ' <center><h1>Esta siendo redirigido </h1><span></span><h1><div class="preloader-wrapper small active">' +
+    '<div class="spinner-layer spinner-green-only">' +
+    '<div class="circle-clipper left">' +
+    ' <div class="circle"></div>' +
+    '</div><div class="gap-patch">' +
+    '<div class="circle"></div>' +
+    '</div><div class="circle-clipper right">' +
+    ' <div class="circle"></div>' +
+    '</div>' +
+    '</div>' +
+    '</div></h1></center>')
+  var url = "parte/listarTodosPartes.php";
+  count = 6
+  setInterval(function () {
+    document.getElementsByTagName("span")[0].textContent = "Tiempo de espera " + (count - 1) + " segundos"
+    count--;
 
-        if (count == 0) {
-          $(location).attr('href', url);
-        }
-      }, 1000);
+    if (count == 0) {
+      $(location).attr('href', url);
     }
-
-    function eventoListarTodo() {
-      $(".body").html(
-        ' <center><h1>Esta siendo redirigido </h1><span></span><h1><div class="preloader-wrapper small active">' +
-        '<div class="spinner-layer spinner-green-only">' +
-        '<div class="circle-clipper left">' +
-        ' <div class="circle"></div>' +
-        '</div><div class="gap-patch">' +
-        '<div class="circle"></div>' +
-        '</div><div class="circle-clipper right">' +
-        ' <div class="circle"></div>' +
-        '</div>' +
-        '</div>' +
-        '</div></h1></center>')
-      var url = "parte/listarTodosPartes.php";
-      count = 3
-      setInterval(function () {
-        document.getElementsByTagName("span")[0].textContent = "Tiempo de espera " + (count - 1) + " segundos"
-        count--;
-
-        if (count == 0) {
-          $(location).attr('href', url);
-        }
-      }, 1000);
-    }
+  }, 1000);
+}
   </script>
 </head>
 
@@ -164,9 +165,10 @@
           <h5>Parte mala conducta</h5>
         </td>
         <td>
-          <a id="listar" class="waves-effect waves-light btn"> Listar partes
+          <a id="listar"  class="waves-effect waves-light btn"> Listar partes
             <i class="material-icons">assignment</i>
           </a>
+          <input id="cp" name="cp" type="text" class="validate">
         </td>
         <td>
           <a id="insertar" class="waves-effect waves-light  btn">Insertar nuevo parte

@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <link rel="stylesheet" href="../css/estilo.css">
+  <script src="../js/codigo.js" defer></script>
 </head>
 
 <body>
@@ -54,7 +55,7 @@
           <label for="nombre">Sr.De/Sra.De</label>
         </div>
         <div class="input-field col s3">
-          <input id="cp" name="cp" type="text" class="validate">
+          <input id="cp" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" name="cp" type="text" class="validate">
           <label for="cp">CP</label>
         </div>
       </div>
@@ -135,7 +136,7 @@
         Fdo. Profesor<textarea name="profesor" id="profesor" class="materialize-textarea"
           placeholder="Firma"></textarea><br>
         <br>
-        <input type="submit" value="Guardar" id="btn1" name="botonGuardar" class="waves-effect waves-light btn">
+        <input type="submit" value="Guardar" id="btnGuardar" name="botonGuardar" class="waves-effect waves-light btn">
         <input type="reset" value="Limpiar" id="btn2" name="btn2" class="waves-effect waves-light btn red lighten-2">
         <a href="listarDatos.php" class="waves-effect waves-light btn green lighten-2" id="btn3" name="btn3"
           role="button">
