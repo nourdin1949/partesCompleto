@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>          
+</head>
+ <body>
+  <div class="container">
+
+    <!-- TÍTULOS -->
+    <div class="row">
+      <h3 class="header left teal-text">Justificación Falta de Asistencia</h3>
+    </div>
+    <!--  <div class="row">
+      <h5 class="header left teal-text">SUBTITULO FORMULARIO</h5>
+    </div>-->
+
+    <form action="listadoJustificaciones.php" method="POST">
+      <button class="waves-effect waves-light btn" value="Listar">Listar</button>
+    </form> 
+  </br>
+    <form action="insertar.php" method="POST">
+<!-- CAMPOS INPUT TEXT -->
+         <!--Tabla Profesor-->
+         <div class="row">
+          <div class="input-field col s6">
+            <input  id="nombre" type="text" name="nombre" class="validate" required>
+            <label for="nombre">Don/Doña</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="dni" type="text" name="dni" class="validate" required>
+            <label for="dni">D.N.I</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="nrp" type="text" name="nrp" class="validate" required>
+            <label for="nrp">N.R.P</label>
+          </div>
+          <!--Tabla Departamento-->
+          <div class="input-field col s6">
+            <input id="departamento" type="text" name="departamento" class="validate" required>
+            <label for="departamento">Profesor/a de</label>
+          </div>
+        </div>
+      
+        
+          <!-- CAMPOS FECHA -->
+          <!--Tabla Justificación-->
+          <div class="row">
+            <p>Faltó a clase en la/s fecha/s:</p>
+            <div class="input-field col s6">
+            <input type = "date" id="fecha_inicio" name="fecha_inicio" class = "datepicker" required/>
+            <!-- <label>Fecha Inicio</label>-->
+          </div>  
+          <div class="input-field col s6">
+                        
+            <input type = "date" id="fecha_fin" name="fecha_fin" class = "datepicker" required/>
+            <!-- <label>Fecha Fin</label>  -->
+          </div>  <p>Número de horas:</p>
+          <div class="input-field col s6">
+            <input id="horas_lectivas" type="text" name="horas_lectivas" class="validate" required>
+            <label for="horas_lectivas">Horas lectivas</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="horas_colectivas" type="text" name="horas_colectivas" class="validate" required>
+            <label for="horas_colectivas">Horas complementarias</label>
+          </div>
+          
+          </div>
+          <!-- CAMPOS CHECKBOX -->
+          <!--Tabla Motivos (Dentro del checkbox)--> <!--Tabla Otros(Dentro del textarea)-->
+          <div class="row">
+          <p>Faltó a clase por los siguientes motivos:</p>
+            <label>
+              <input type="checkbox" name="motivos" value="medico"/>
+              <span>Visita al médico</span>
+            </label>
+            <label>
+              <input type="checkbox" name="motivos" value="hijo"/>
+              <span>Cuidado de hijo</span>
+            </label>
+            <label>
+              <input type="checkbox" name="motivos" value="familiar"/>
+              <span>Emergencia familiar</span>
+            </label>
+            <label>
+              <input type="text" id="otros_motivos" name="otros_motivos"/>
+              <label for="otros_motivos">Otros</label>
+            </label>
+          </p>
+            </div>
+        
+
+         <!--campo firma-->
+         <!--Tabla Justificación-->
+         <div class="row">
+          <p>Y para que conste y surte a los efectos oportunos, firma la presente en Navalmoral de la Mata a:</p>
+          <div class="input-field col s6">                     
+            <input type = "date" id="fecha_firma" name="fecha_firma" class = "datepicker" required/>
+            </div>
+          </div> 
+          <div class="row">
+            <div class="input-field col s6">
+              <p>Firma del Profesor/a:</p>
+              <input id="firma" type="text" name="firma" class="validate" required>
+              <label for="firma">Fdo</label>
+            </div> 
+          </div>
+
+          <!--campo constancia-->
+            <!--Tabla Documentos-->
+            <div class="row">
+              <p>Se adjuntan como constancia los siguientes documentos:</p>
+              <div class="input-field col s6">
+                <input id="documentos" type="file" name="documentos" class="validate" required>
+              </div>
+            </div>
+      <button class="waves-effect waves-light btn" value="Enviar">Enviar</button>
+    </form>
+  </div>  
+  </div>     
+
+
+</body>
+
+<script>
+
+ //Evento para los campos fecha
+ document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".datepicker");
+  
+});
+</script>
+
+</html>';
+
+   
